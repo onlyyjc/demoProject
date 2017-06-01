@@ -6,5 +6,4 @@ package yjc.demo.impl;
  */
 public interface LoginService {
 
-
 }
