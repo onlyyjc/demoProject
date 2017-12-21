@@ -1,4 +1,4 @@
-package yjc.test.pattern.template;
+package yjc.test.pattern.templateMethod;
 
 /**
  * Created by yangjiachang on 2016/9/12.
