@@ -99,11 +99,19 @@ public class RoundQueue<T> implements Serializable {
      * @return int
      */
     public T get(int index) {
-//        if (index < 0 || index >= realSize) {
-//            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + realSize);
-//        }
+        if (index < 0 || index >= realSize) {
+            throw new IndexOutOfBoundsException("Index: " + index + ", Size: " + realSize);
+        }
 
         return queue[index];
+    }
+
+    /**
+     * 返回最末位置的值
+     *
+     */
+    public T getLast() {
+        return get(tail);
     }
 
     /**
