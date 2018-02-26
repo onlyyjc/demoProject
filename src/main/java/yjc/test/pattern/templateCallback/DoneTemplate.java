@@ -5,7 +5,12 @@ package yjc.test.pattern.templateCallback;
  */
 public class DoneTemplate {
 
-    public void execute(WriterCallback callback){
+    public void execute(String str){
+        this.doExecute(() -> str);
+
+    }
+
+    public void doExecute(WriterCallback callback){
         System.out.println("step 1");
         System.out.println("step 2");
         System.out.println(callback.doWrite());
@@ -15,6 +20,6 @@ public class DoneTemplate {
 
     public static void main(String[] args) {
         DoneTemplate template = new DoneTemplate();
-        template.execute(() -> "step 3");
+        template.execute("step 3");
     }
 }
